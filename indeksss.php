@@ -153,7 +153,7 @@
   </tbody>
 </table>
 
-  
+<h3> PERTEMUAN 3 </h3>  
   <?php
 class buah {
   public $nama;
@@ -177,7 +177,9 @@ echo $apel->get_name();
 echo "<br>";
 echo $pisang->get_name();
 echo "<br>";
+?>
 
+<?php
 class mobil {
   public $warna;
 
@@ -194,6 +196,76 @@ $toyota = new mobil();
 $toyota->set_warna('biru metalik');
 
 echo $toyota->get_warna();
+?>
+
+<h3> PERTEMUAN 4 </h3>
+<h4 style="color:black;" align="left">Constructor</h4>
+ <?php
+class buahh {
+  public $nama;
+  public $warna;
+
+  function __construct($nama, $warna) {
+    $this->nama = $nama;
+    $this->warna = $warna;
+  }
+  function get_name() {
+    return $this->nama;
+  }
+  function get_warna() {
+    return $this->warna;
+  }
+}
+
+$apel = new buahh("apel", "merah");
+echo $apel->get_name();
+echo "<br>";
+echo $apel->get_warna();
+?>
+  
+
+<h4 style="color:black;" align="left">Destructor</h4>
+ <?php
+class buahhh {
+  public $nama;
+  public $warna;
+
+  function __construct($nama, $warna) {
+    $this->nama = $nama;
+    $this->warna = $warna;
+  }
+  function __destruct() {
+    echo "buah tersebut adalah {$this->nama} dan warnanya adalah {$this->warna}.";
+  }
+}
+
+$apel = new buahhh("apel", "merah");
+echo "<br>";
+?>
+
+<h2> TUGAS PERTEMUAN 4</H2>
+<?php
+$mahasiswi = [
+  [
+    'nama' => 'Khalwa',
+    'tinggi_badan' => 146,
+    'warna_kulit' => 'Sawo Matang'
+  ],
+   [
+   'nama' => 'Amel',
+   'tinggi_badan' => 154,
+   'warna_kulit' => 'Sawo Matang' 
+   ],
+   [
+    'nama' => 'Najwa',
+    'tinggi_badan' => 157,
+    'warna_kulit' => 'Kuning Langsat'
+   ]
+];
+
+foreach ($mahasiswi as $mhs) {
+  echo "Mahasiswi tersebut bernama ". $mhs['nama']. ",Tinggi Badan ". $mhs['tinggi_badan']. "cm, dan Warna Kulit ". $mhs['warna_kulit']. "<br>";
+}
 ?>
 
 </body>
